@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Maxlab\\": "src/"
+      "Maxlab\\VueElement\\": "src/"
     }
   },
   "minimum-stability": "dev",
