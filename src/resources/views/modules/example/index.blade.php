@@ -40,7 +40,7 @@
 @section('content')
     <el-upload
             class="avatar-uploader"
-            action="/blackhole"
+            action="/"
             :show-file-list="false"
             :on-success="handleAvatarScucess"
             :before-upload="beforeAvatarUpload">
