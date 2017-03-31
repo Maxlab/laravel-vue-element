@@ -20,7 +20,7 @@ class VueElementServiceProvider extends ServiceProvider
             __DIR__.'/../src/resources/assets' => resource_path('/assets'),
             __DIR__.'/../package.json' => base_path('/'),
             __DIR__.'/../webpack.mix.js' => base_path('/'),
-        ]);
+        ], 'laravel-vue-element');
     }
 
     /**
