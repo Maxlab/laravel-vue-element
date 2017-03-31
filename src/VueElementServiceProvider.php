@@ -17,7 +17,7 @@ class VueElementServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../src/resources/assets' => resource_path('/assets'),
-            __DIR__.'/../resources/views' => resource_path('views/vendor/laravel-vue-element'),
+            __DIR__.'/../src/resources/views' => resource_path('/views'),
             __DIR__.'/../package.json' => base_path('/package.json'),
             __DIR__.'/../webpack.mix.js' => base_path('/webpack.mix.js'),
         ], 'laravel-vue-element');
