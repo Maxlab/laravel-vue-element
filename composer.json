@@ -1,0 +1,23 @@
+{
+  "name": "maxlab/laravel-vue-element",
+  "description": "Vue2 with ElemeFE/element for Laravel 5",
+  "keywords": [
+    "vue-laravel",
+    "laravel-starter",
+    "laravel-vue-element",
+    "laravel",
+    "laravel-rad",
+    "laravel5",
+    "laravel-edition",
+    "laravel-rad"
+  ],
+  "type": "project",
+  "license": "MIT",
+  "homepage": "https://github.com/Maxlab/laravel-vue-element",
+  "require": {
+    "php": ">=5.6.4",
+    "laravel/framework": "5.4.*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
