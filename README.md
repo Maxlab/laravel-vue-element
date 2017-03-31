@@ -16,7 +16,7 @@ Maxlab\VueElement\Provider\VueElementServiceProvider::class
 Then
 ```sh
 $ php artisan vendor:publish --force --provider="Maxlab\VueElement\Provider\VueElementServiceProvider"
-$ npm run dev
+$ npm install && npm run dev
 ```
 
 ## License
