@@ -1,6 +1,6 @@
 <?php
 
-namespace Maxlab\VueElement\Provider;
+namespace Maxlab\VueElement;
 
 use Faker\Factory;
 use Faker\Generator;
