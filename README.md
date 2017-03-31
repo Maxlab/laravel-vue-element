@@ -8,7 +8,7 @@
 $ composer require maxlab/laravel-vue-element
 ```
 
-Then add to app/Providers/AppServiceProvider.php
+Then add to config/app.php
 ```php
 Maxlab\VueElement\Provider\VueElementServiceProvider::class
 ```
