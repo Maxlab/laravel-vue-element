@@ -11,7 +11,7 @@ var assets_root = 'resources/assets';
  |
  */
 
-mix.js(assets_root + '/vue-element/js/app.js', 'public/js');
-mix.copy('node_modules/theme-default-scss/dist', assets_root + '/vue-element/sass/el', false);
-mix.copy('node_modules/theme-default-scss/dist/fonts', assets_root + '/vue-element/sass/fonts');
-mix.sass(assets_root + '/vue-element/sass/app.scss', 'public/css');
+mix.js(assets_root + '/vue-element/js/app.js', 'public/js')
+  .mix.copy('node_modules/theme-default-scss/dist', assets_root + '/vue-element/sass/el', false)
+  .mix.copy('node_modules/theme-default-scss/dist/fonts', assets_root + '/vue-element/sass/fonts')
+  .mix.sass(assets_root + '/vue-element/sass/app.scss', 'public/css');
