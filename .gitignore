@@ -4,4 +4,3 @@
 /storage/*.key
 /vendor
 /.idea
-.env
