@@ -1,0 +1,168 @@
+@charset "UTF-8";
+@import "./common/var";
+
+.el-tag{
+
+    background-color: $tag-fill;
+
+    display: inline-block;
+
+    padding: $tag-padding;
+
+    height: 24px;
+
+    line-height: (24px - 2);
+
+    font-size: $tag-font-size;
+
+    color: $tag-color;
+
+    border-radius: $tag-border-radius;
+
+    box-sizing: border-box;
+
+    border: 1px solid transparent;
+
+    white-space: nowrap;
+
+    & .el-icon-close{
+
+        border-radius: 50%;
+
+        text-align: center;
+
+        position: relative;
+
+        cursor: pointer;
+
+        font-size: 12px;
+
+        -ms-transform: scale(.75, .75);
+
+            transform: scale(.75, .75);
+
+        height: 18px;
+
+        width: 18px;
+
+        line-height: 18px;
+
+        vertical-align: middle;
+
+        top: -1px;
+
+        right: -2px;
+
+        &:hover{
+
+            background-color: #fff;
+
+            color: $tag-fill;
+        }
+    }
+}
+
+.el-tag--gray{
+
+    background-color: $tag-gray-fill;
+
+    border-color: $tag-gray-border;
+
+    color: $tag-gray-color;
+
+    & .el-tag__close:hover {
+
+        background-color: $tag-gray-color;
+
+        color: #fff;
+    }
+}
+
+.el-tag--gray.is-hit{
+
+    border-color: $tag-gray-color;
+}
+
+.el-tag--primary{
+
+    background-color: $tag-primary-fill;
+
+    border-color: $tag-primary-border;
+
+    color: $tag-primary-color;
+
+    & .el-tag__close:hover {
+
+        background-color: $tag-primary-color;
+
+        color: #fff;
+    }
+}
+
+.el-tag--primary.is-hit{
+
+    border-color: $tag-primary-color;
+}
+
+.el-tag--success{
+
+    background-color: $tag-success-fill;
+
+    border-color: $tag-success-border;
+
+    color: $tag-success-color;
+
+    & .el-tag__close:hover {
+
+        background-color: $tag-success-color;
+
+        color: #fff;
+    }
+}
+
+.el-tag--success.is-hit{
+
+    border-color: $tag-success-color;
+}
+
+.el-tag--warning{
+
+    background-color: $tag-warning-fill;
+
+    border-color: $tag-warning-border;
+
+    color: $tag-warning-color;
+
+    & .el-tag__close:hover {
+
+        background-color: $tag-warning-color;
+
+        color: #fff;
+    }
+}
+
+.el-tag--warning.is-hit{
+
+    border-color: $tag-warning-color;
+}
+
+.el-tag--danger{
+
+    background-color: $tag-danger-fill;
+
+    border-color: $tag-danger-border;
+
+    color: $tag-danger-color;
+
+    & .el-tag__close:hover {
+
+        background-color: $tag-danger-color;
+
+        color: #fff;
+    }
+}
+
+.el-tag--danger.is-hit{
+
+    border-color: $tag-danger-color;
+}

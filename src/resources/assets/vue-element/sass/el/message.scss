@@ -1,0 +1,134 @@
+@charset "UTF-8";
+@import "./common/var";
+
+.el-message{
+
+    box-shadow: $message-shadow;
+
+    min-width: $message-min-width;
+
+    padding: $message-padding;
+
+    box-sizing: border-box;
+
+    border-radius: $border-radius-small;
+
+    position: fixed;
+
+    left: 50%;
+
+    top: 20px;
+
+    -ms-transform: translateX(-50%);
+
+        transform: translateX(-50%);
+
+    background-color: #fff;
+
+    transition: opacity 0.3s, transform .4s;
+
+    overflow: hidden;
+
+    & .el-icon-circle-check{
+
+        color: $message-success-color;
+    }
+
+    & .el-icon-circle-cross{
+
+        color: $message-danger-color;
+    }
+
+    & .el-icon-information{
+
+        color: $message-info-color;
+    }
+
+    & .el-icon-warning{
+
+        color: $message-warning-color;
+    }
+}
+
+.el-message__group{
+
+    margin-left: 38px;
+
+    position: relative;
+
+    height: 20px;
+
+    & p {
+
+        font-size: $font-size-base;
+
+        line-height: 20px;
+
+        margin: 0 34px 0 0;
+
+        white-space: nowrap;
+
+        color: $message-content-color;
+
+        text-align: justify;
+
+        display: inline-block;
+
+        vertical-align: middle;
+    }
+}
+
+.el-message__group.is-with-icon{
+
+    margin-left: 0;
+}
+
+.el-message__img{
+
+    width: 40px;
+
+    height: 40px;
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+}
+
+.el-message__icon{
+
+    vertical-align: middle;
+
+    margin-right: 8px;
+}
+
+.el-message__closeBtn{
+
+    top: 3px;
+
+    right: 0;
+
+    position: absolute;
+
+    cursor: pointer;
+
+    color: $message-close-color;
+
+    font-size: $font-size-base;
+
+    &:hover {
+
+        color: $message-close-hover-color;
+    }
+}
+
+.el-message-fade-enter,
+  .el-message-fade-leave-active {
+
+    opacity: 0;
+
+    -ms-transform: translate(-50%, -100%);
+
+        transform: translate(-50%, -100%);
+}

@@ -1,0 +1,46 @@
+@import "../common/var";
+
+.el-time-range-picker{
+
+    min-width: 354px;
+
+    overflow: visible
+}
+
+.el-time-range-picker__content{
+
+    position: relative;
+
+    text-align: center;
+
+    padding: 10px
+}
+
+.el-time-range-picker__cell{
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 4px 7px 7px;
+
+    width: 50%;
+
+    display: inline-block
+}
+
+.el-time-range-picker__header{
+
+    margin-bottom: 5px;
+
+    text-align: center;
+
+    font-size: 14px
+}
+
+.el-time-range-picker__body{
+
+    border-radius:2px;
+
+    border: 1px solid $datepicker-border-color
+}

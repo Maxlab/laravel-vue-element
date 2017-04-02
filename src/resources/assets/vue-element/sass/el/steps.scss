@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@import "./common/var";
+
+.el-steps{
+
+    font-size: 0;
+
+    > :last-child .el-step__line{
+
+        display: none;
+    }
+}
+
+.el-steps.is-horizontal{
+
+    white-space: nowrap;
+}

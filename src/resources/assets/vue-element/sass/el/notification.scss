@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import "./common/var";
+
+.el-notification{
+
+    width: $notification-width;
+
+    padding: $notification-padding;
+
+    box-sizing: border-box;
+
+    border-radius: $border-radius-small;
+
+    position: fixed;
+
+    right: 16px;
+
+    background-color: #fff;
+
+    box-shadow: $notification-shadow;
+
+    transition: opacity 0.3s, transform .3s, right .3s, top 0.4s;
+
+    overflow: hidden;
+
+    & .el-icon-circle-check{
+
+        color: $notification-success-color;
+    }
+
+    & .el-icon-circle-cross{
+
+        color: $notification-danger-color;
+    }
+
+    & .el-icon-information{
+
+        color: $notification-info-color;
+    }
+
+    & .el-icon-warning{
+
+        color: $notification-warning-color;
+    }
+}
+
+.el-notification__group{
+
+    margin-left: 0;
+}
+
+.el-notification__group.is-with-icon{
+
+    margin-left: 55px;
+}
+
+.el-notification__title{
+
+    font-weight: 400;
+
+    font-size: $notification-title-font-size;
+
+    color: $notification-title-color;
+}
+
+.el-notification__content{
+
+    font-size: $notification-font-size;
+
+    line-height: 21px;
+
+    margin: 10px 0 0 0;
+
+    color: $notification-color;
+
+    text-align: justify;
+}
+
+.el-notification__icon{
+
+    width: $notification-icon-size;
+
+    height: $notification-icon-size;
+
+    font-size: $notification-icon-size;
+
+    float: left;
+
+    position: relative;
+
+    top: 3px;
+}
+
+.el-notification__closeBtn{
+
+    top: 20px;
+
+    right: 20px;
+
+    position: absolute;
+
+    cursor: pointer;
+
+    color: $notification-close-color;
+
+    font-size: $notification-font-size;
+
+    &:hover {
+
+        color: $notification-close-hover-color;
+    }
+}
+
+.el-notification-fade-enter {
+
+    -ms-transform: translateX(100%);
+
+        transform: translateX(100%);
+
+    right: 0;
+}
+
+.el-notification-fade-leave-active {
+
+    opacity: 0;
+}

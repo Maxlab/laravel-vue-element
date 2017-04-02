@@ -1,0 +1,148 @@
+@charset "UTF-8";
+@import "./input";
+@import "./common/var";
+
+.el-input-number{
+
+    display: inline-block;
+
+    overflow: hidden;
+
+    width: 180px;
+
+    position: relative;
+
+    & .el-input__inner{
+
+        -webkit-appearance: none;
+
+           -moz-appearance: none;
+
+                appearance: none;
+
+        padding-right: ($input-height * 2 + 10);
+    }
+}
+
+.el-input-number.is-without-controls{
+
+    & .el-input__inner{
+
+        padding-right: 10px;
+    }
+}
+
+.el-input-number.is-disabled{
+
+    & .el-input-number__increase, .el-input-number__decrease{
+
+        border-color: $disabled-border-base;
+
+        color: $disabled-border-base;
+
+        &:hover{
+
+            color: $disabled-border-base;
+
+            cursor: not-allowed;
+        }
+    }
+}
+
+.el-input-number__increase, .el-input-number__decrease{
+
+    height: auto;
+
+    border-left: $border-base;
+
+    width: $input-height;
+
+    line-height: ($input-height - 2);
+
+    top: 1px;
+
+    text-align: center;
+
+    color: #99A9BF;
+
+    cursor: pointer;
+
+    position: absolute;
+
+    z-index: 1;
+
+    &:hover {
+
+        color: $color-primary;
+
+        &:not(.is-disabled) ~ .el-input .el-input__inner:not(.is-disabled) {
+
+            border-color: $input-focus-border;
+        }
+    }
+}
+
+.el-input-number__increase.is-disabled, .el-input-number__decrease.is-disabled{
+
+    color: $disabled-border-base;
+
+    cursor: not-allowed;
+}
+
+.el-input-number__increase{
+
+    right: 0;
+}
+
+.el-input-number__decrease{
+
+    right: ($input-height + 1px);
+}
+
+.el-input-number--large{
+
+    width: 200px;
+
+    & .el-input-number__increase, .el-input-number__decrease {
+
+        line-height: $input-large-height;
+
+        width: $input-large-height;
+
+        font-size: $input-large-font-size;
+    }
+
+    & .el-input-number__decrease {
+
+        right: ($input-large-height + 1px);
+    }
+
+    & .el-input__inner {
+
+        padding-right: ($input-large-height * 2 + 10);
+    }
+}
+
+.el-input-number--small{
+
+    width: 130px;
+
+    & .el-input-number__increase, .el-input-number__decrease {
+
+        line-height: $input-small-height;
+
+        width: $input-small-height;
+
+        font-size: $input-small-font-size;
+    }
+
+    & .el-input-number__decrease {
+
+        right: ($input-small-height + 1px);
+    }
+
+    & .el-input__inner {
+
+        padding-right: ($input-small-height * 2 + 10);
+    }
+}
