@@ -1,0 +1,71 @@
+@charset "UTF-8";
+@import "./common/var";
+
+.el-rate{
+
+    height: $rate-height;
+
+    line-height: 1;
+}
+
+.el-rate__item{
+
+    display: inline-block;
+
+    position: relative;
+
+    font-size: 0;
+
+    vertical-align: middle;
+}
+
+.el-rate__icon{
+
+    position: relative;
+
+    display: inline-block;
+
+    font-size: $rate-icon-size;
+
+    margin-right: $rate-icon-margin;
+
+    color: $rate-icon-color;
+
+    transition: .3s;
+
+    &.hover {
+
+        -ms-transform: scale(1.15);
+
+            transform: scale(1.15);
+    }
+
+    .path2 {
+
+        position: absolute;
+
+        left: 0;
+
+        top: 0;
+    }
+}
+
+.el-rate__decimal{
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    display: inline-block;
+
+    overflow: hidden;
+}
+
+.el-rate__text{
+
+    font-size: $rate-font-size;
+
+    vertical-align: middle;
+}

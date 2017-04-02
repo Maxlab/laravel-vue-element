@@ -1,0 +1,66 @@
+@charset "UTF-8";
+@import "../common/var";
+@import "./option";
+
+.element-dropdown{
+
+    background-color: $dropdown-fill;
+
+    border: $dropdown-border;
+
+    border-radius: $dropdown-radius;
+
+    box-shadow: $dropdown-shadow;
+
+    left: 0;
+
+    list-style-type: none;
+
+    margin: -$dropdown-border-width;
+
+    margin-top: 5px;
+
+    min-width: ($input-width + 4);
+
+    padding: 0;
+
+    position: absolute;
+
+    white-space: nowrap;
+
+    z-index: $index-normal;
+
+    &:empty{
+
+        display: none;
+    }
+}
+
+.element-dropdown__empty{
+
+    color: $dropdown-option-empty-color;
+
+    font-size: $input-font-size;
+
+    padding: 7px;
+
+    text-align: center;
+}
+
+.element-dropdown__list{
+
+    margin: 0;
+
+    max-height: $cascader-height;
+
+    overflow: auto;
+
+    padding: 0;
+}
+
+.element-dropdown__option{
+
+    max-height: 250px;
+
+    overflow: auto;
+}

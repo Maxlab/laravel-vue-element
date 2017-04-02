@@ -1,0 +1,129 @@
+@charset "UTF-8";
+@import "./common/var";
+
+.el-alert{
+
+    width: 100%;
+
+    padding: $alert-padding;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    border-radius: $alert-border-radius;
+
+    position: relative;
+
+    background-color: $color-white;
+
+    overflow: hidden;
+
+    color: #fff;
+
+    opacity: 1;
+
+    display: table;
+
+    transition: opacity .2s;
+
+    & .el-alert__description{
+
+        color: #fff;
+
+        font-size: $alert-description-font-size;
+
+        margin: 5px 0 0 0;
+    }
+}
+
+.el-alert--success{
+
+    background-color: $alert-success-color;
+}
+
+.el-alert--info{
+
+    background-color: $alert-info-color;
+}
+
+.el-alert--warning{
+
+    background-color: $alert-warning-color;
+}
+
+.el-alert--error{
+
+    background-color: $alert-danger-color;
+}
+
+.el-alert__content{
+
+    display: table-cell;
+
+    padding: 0 8px;
+}
+
+.el-alert__icon{
+
+    font-size: $alert-icon-size;
+
+    width: $alert-icon-size;
+
+    display: table-cell;
+
+    color: $color-white;
+
+    vertical-align: middle;
+}
+
+.el-alert__icon.is-big{
+
+    font-size: $alert-icon-large-size;
+
+    width: $alert-icon-large-size;
+}
+
+.el-alert__title{
+
+    font-size: $alert-title-font-size;
+
+    line-height: 18px;
+}
+
+.el-alert__title.is-bold{
+
+    font-weight: 700;
+}
+
+.el-alert__closebtn{
+
+    font-size: $alert-close-font-size;
+
+    color: #fff;
+
+    opacity: 1;
+
+    top: 12px;
+
+    right: 15px;
+
+    position: absolute;
+
+    cursor: pointer;
+}
+
+.el-alert__closebtn.is-customed{
+
+    font-style: normal;
+
+    font-size: $alert-close-customed-font-size;
+
+    top: 9px;
+}
+
+.el-alert-fade-enter,
+  .el-alert-fade-leave-active {
+
+    opacity: 0;
+}

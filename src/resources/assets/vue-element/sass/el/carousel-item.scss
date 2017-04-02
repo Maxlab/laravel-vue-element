@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@import "./common/var";
+
+.el-carousel{}
+
+.el-carousel__item{
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: inline-block;
+
+    transition: .4s ease-in-out;
+
+    overflow: hidden;
+}
+
+.el-carousel__item--card{
+
+    width: 50%;
+
+    z-index: ($index-normal - 1);
+
+    &.is-in-stage {
+
+        cursor: pointer;
+
+        z-index: $index-normal;
+
+        &:hover .el-carousel__mask,
+          &.is-hover .el-carousel__mask {
+
+            opacity: 0.12;
+        }
+    }
+
+    &.is-active {
+
+        z-index: ($index-normal + 1);
+    }
+}
+
+.el-carousel__mask{
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    top: 0;
+
+    left: 0;
+
+    background-color: $color-white;
+
+    opacity: 0.24;
+
+    transition: .2s;
+}

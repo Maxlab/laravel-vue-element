@@ -1,0 +1,118 @@
+@import "../common/var";
+@import "./picker-panel";
+
+.el-date-picker{
+
+    min-width: 254px;
+
+    &.has-sidebar.has-time{
+
+        min-width: 434px;
+    }
+
+    &.has-sidebar{
+
+        min-width: 370px;
+    }
+
+    &.has-time{
+
+        min-width: 324px;
+    }
+
+    .el-picker-panel__content{
+
+        min-width: 224px;
+    }
+
+    table{
+
+        table-layout: fixed;
+
+        width: 100%;
+    }
+}
+
+.el-date-picker__editor-wrap{
+
+    position: relative;
+
+    display: table-cell;
+
+    padding: 0 5px;
+}
+
+.el-date-picker__time-header{
+
+    position: relative;
+
+    border-bottom: 1px solid $datepicker-inner-border-color;
+
+    font-size: 12px;
+
+    padding: 8px 5px 5px 5px;
+
+    display: table;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.el-date-picker__header{
+
+    margin: 12px;
+
+    text-align: center;
+}
+
+.el-date-picker__header-label{
+
+    font-size: 14px;
+
+    padding: 0 5px;
+
+    line-height: 22px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    &:hover {
+
+        color: $datepicker-text-hover-color;
+    }
+
+    &.active {
+
+        color: $datepicker-active-color;
+    }
+}
+
+.el-date-picker__prev-btn{
+
+    float: left;
+}
+
+.el-date-picker__next-btn{
+
+    float: right;
+}
+
+.el-date-picker__time-wrap{
+
+    padding: 10px;
+
+    text-align: center;
+}
+
+.el-date-picker__time-label{
+
+    float: left;
+
+    cursor: pointer;
+
+    line-height: 30px;
+
+    margin-left: 10px;
+}

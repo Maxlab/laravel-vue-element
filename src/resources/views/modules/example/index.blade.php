@@ -8,6 +8,7 @@
         .body {
             background-color: #636b6f;
         }
+
         .avatar-uploader .el-upload {
             border: 1px dashed #d9d9d9;
             border-radius: 6px;
@@ -38,42 +39,19 @@
 @endsection
 
 @section('content')
-    <el-upload
-            class="avatar-uploader"
-            action="/"
-            :show-file-list="false"
-            :on-success="handleAvatarScucess"
-            :before-upload="beforeAvatarUpload">
-        <img v-if="imageUrl" :src="imageUrl" class="avatar">
-        <i v-else class="el-icon-plus avatar-uploader-icon"></i>
-    </el-upload>
+    <el-row type="flex" class="row-bg" justify="space-around">
+        <el-col :span="6">
+            <div class="grid-content bg-purple"></div>
+        </el-col>
+        <el-col :span="6">
+            <app-uploader></app-uploader>
+        </el-col>
+        <el-col :span="6">
+            <div class="grid-content bg-purple"></div>
+        </el-col>
+    </el-row>
 @endsection
 
 @section('js')
-    <script>
-        var vm = new Vue({
-            el: '#app',
-            data: {
-                imageUrl: ''
-            },
-            methods: {
-                handleAvatarScucess(res, file) {
-                    this.imageUrl = URL.createObjectURL(file.raw);
-                },
-                beforeAvatarUpload(file) {
-                    const isJPG = file.type === 'image/jpeg';
-                    const isLt2M = file.size / 1024 / 1024 < 2;
-
-                    if (!isJPG) {
-                        this.$message.error('Avatar picture must be JPG format!');
-                    }
-                    if (!isLt2M) {
-                        this.$message.error('Avatar picture size can not exceed 2MB!');
-                    }
-                    return isJPG && isLt2M;
-                }
-            }
-        });
-    </script>
 @endsection
     

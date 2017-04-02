@@ -1,0 +1,485 @@
+/* Transition
+  -------------------------- */
+$all-transition: all .3s cubic-bezier(.645,.045,.355,1) !default;
+$fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$fade-linear-transition: opacity 200ms linear !default;
+$md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms !default;
+$border-transition-base: border-color .2s cubic-bezier(.645,.045,.355,1) !default;
+$color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
+/* Colors
+  -------------------------- */
+$color-primary: #20a0ff !default;
+$color-success: #13ce66 !default;
+$color-warning: #f7ba2a !default;
+$color-danger: #ff4949 !default;
+$color-info: #50bfff !default;
+$color-blue: #2e90fe !default;
+$color-blue-light: #5da9ff !default;
+$color-blue-lighter: rgba($color-blue, 0.12) !default;
+$color-white: #fff !default;
+$color-black: #000 !default;
+$color-grey: #c0ccda !default;
+/* Link
+  -------------------------- */
+$link-color: #475669 !default;
+$link-hover-color: $color-primary !default;
+/* Border
+  -------------------------- */
+$border-width-base: 1px !default;
+$border-style-base: solid !default;
+$border-color-base: $color-grey !default;
+$border-color-hover: #8492a6 !default;
+$border-base: $border-width-base $border-style-base $border-color-base !default;
+$border-radius-base: 4px !default;
+$border-radius-small: 2px !default;
+$border-radius-circle: 100% !default;
+$shadow-base: 0 0 2px rgba($color-black, 0.18), 0 0 1px $color-blue-light !default;
+/* Box-shadow
+  -------------------------- */
+$box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04) !default;
+$box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12) !default;
+/* Fill
+  -------------------------- */
+$fill-base: $color-white !default;
+/* Font
+  -------------------------- */
+$font-size-base: 14px !default;
+$font-color-base: #1f2d3d !default;
+$font-color-disabled-base: #bbb !default;
+/* Size
+  -------------------------- */
+$size-base: 14px !default;
+/* z-index
+  -------------------------- */
+$index-normal: 1 !default;
+$index-top: 1000 !default;
+$index-popper: 2000 !default;
+/* Disable base
+  -------------------------- */
+$disabled-fill-base: #EFF2F7 !default;
+$disabled-color-base: #bbb !default;
+$disabled-border-base: #D3DCE6 !default;
+/* Icon
+  -------------------------- */
+$icon-color: #666 !default;
+/* Checkbox
+  -------------------------- */
+$checkbox-font-size: 14px !default;
+$checkbox-color: #1f2d3d !default;
+$checkbox-input-height: 18px !default;
+$checkbox-input-width: 18px !default;
+$checkbox-input-border-radius: $border-radius-base !default;
+$checkbox-input-fill: $color-white !default;
+$checkbox-input-border: $border-base !default;
+$checkbox-input-border-color: $border-color-base !default;
+$checkbox-icon-color: $color-white !default;
+$checkbox-disabled-input-border-color: $disabled-border-base !default;
+$checkbox-disabled-input-fill: $disabled-fill-base !default;
+$checkbox-disabled-icon-color: $disabled-fill-base !default;
+$checkbox-disabled-checked-input-fill: $disabled-border-base !default;
+$checkbox-disabled-checked-input-border-color: $disabled-border-base !default;
+$checkbox-disabled-checked-icon-color: $color-white !default;
+$checkbox-checked-input-border-color: $color-blue !default;
+$checkbox-checked-input-fill: $color-primary !default;
+$checkbox-checked-icon-color: $fill-base !default;
+$checkbox-input-shadow-hover: $shadow-base !default;
+$checkbox-input-border-color-hover: $color-primary !default;
+/* Radio
+  -------------------------- */
+$radio-font-size: 14px !default;
+$radio-color: #1f2d3d !default;
+$radio-input-height: 18px !default;
+$radio-input-width: 18px !default;
+$radio-input-border-radius: $border-radius-circle !default;
+$radio-input-fill: $color-white !default;
+$radio-input-border: $border-base !default;
+$radio-input-border-color: $border-color-base !default;
+$radio-icon-color: $color-white !default;
+$radio-disabled-input-border-color: $disabled-border-base !default;
+$radio-disabled-input-fill: $disabled-fill-base !default;
+$radio-disabled-icon-color: $disabled-fill-base !default;
+$radio-disabled-checked-input-fill: $disabled-border-base !default;
+$radio-disabled-checked-input-border-color: $disabled-border-base !default;
+$radio-disabled-checked-icon-color: $color-white !default;
+$radio-checked-input-border-color: $color-primary !default;
+$radio-checked-input-fill: $color-white !default;
+$radio-checked-icon-color: $color-primary !default;
+$radio-input-shadow-hover: $shadow-base !default;
+$radio-input-border-color-hover: $color-primary !default;
+$radio-button-font-size: $font-size-base !default;
+/* Select
+  -------------------------- */
+$select-border-color-hover: $border-color-hover !default;
+$select-disabled-border: $disabled-border-base !default;
+$select-font-size: $font-size-base !default;
+$select-close-hover-color: #99a9bf !default;
+$select-input-color: $color-grey !default;
+$select-multiple-input-color: #666 !default;
+$select-input-focus-background: $color-primary !default;
+$select-input-font-size: 12px !default;
+$select-tag-height: 24px !default;
+$select-tag-color: $color-white !default;
+$select-tag-background: $color-primary !default;
+$select-option-color: $link-color !default;
+$select-option-disabled-color: $color-grey !default;
+$select-option-height: 36px !default;
+$select-option-hover-background: #e5e9f2 !default;
+$select-option-selected: $color-primary !default;
+$select-option-selected-hover: #1D8CE0 !default;
+$select-group-color: #999 !default;
+$select-group-height: 30px !default;
+$select-group-font-size: 12px !default;
+$select-dropdown-background: $color-white !default;
+$select-dropdown-shadow: $box-shadow-base !default;
+$select-dropdown-empty-color: #999 !default;
+$select-dropdown-max-height: 274px !default;
+$select-dropdown-padding: 6px 0 !default;
+$select-dropdown-empty-padding: 10px 0 !default;
+$select-dropdown-border: solid 1px $disabled-border-base !default;
+/* Alert
+  -------------------------- */
+$alert-padding: 8px 16px !default;
+$alert-border-radius: $border-radius-base !default;
+$alert-title-font-size: 13px !default;
+$alert-description-font-size: 12px !default;
+$alert-close-font-size: 12px !default;
+$alert-close-customed-font-size: 13px !default;
+$alert-success-color: $color-success !default;
+$alert-info-color: $color-info !default;
+$alert-warning-color: $color-warning !default;
+$alert-danger-color: $color-danger !default;
+$alert-icon-size: 16px !default;
+$alert-icon-large-size: 28px !default;
+/* Message Box
+  -------------------------- */
+$msgbox-width: 420px !default;
+$msgbox-border-radius: 3px !default;
+$msgbox-font-size: 16px !default;
+$msgbox-content-font-size: 14px !default;
+$msgbox-content-color: $link-color !default;
+$msgbox-error-font-size: 12px !default;
+$msgbox-success-color: $color-success !default;
+$msgbox-info-color: $color-info !default;
+$msgbox-warning-color: $color-warning !default;
+$msgbox-danger-color: $color-danger !default;
+/* Message
+  -------------------------- */
+$message-shadow: $box-shadow-base !default;
+$message-min-width: 300px !default;
+$message-padding: 10px 12px !default;
+$message-content-color: $border-color-hover !default;
+$message-close-color: $color-grey !default;
+$message-close-hover-color: #99A9BF !default;
+$message-success-color: $color-success !default;
+$message-info-color: $color-info !default;
+$message-warning-color: $color-warning !default;
+$message-danger-color: $color-danger !default;
+/* Notification
+  -------------------------- */
+$notification-width: 330px !default;
+$notification-padding: 20px !default;
+$notification-shadow: $box-shadow-base !default;
+$notification-icon-size: 40px !default;
+$notification-font-size: $font-size-base !default;
+$notification-color: $border-color-hover !default;
+$notification-title-font-size: 16px !default;
+$notification-title-color: #1f2d3d !default;
+$notification-close-color: $color-grey !default;
+$notification-close-hover-color: #99A9BF !default;
+$notification-success-color: $color-success !default;
+$notification-info-color: $color-info !default;
+$notification-warning-color: $color-warning !default;
+$notification-danger-color: $color-danger !default;
+/* Input
+  -------------------------- */
+$input-font-size: $font-size-base !default;
+$input-color: $font-color-base !default;
+$input-width: 140px !default;
+$input-height: 36px !default;
+$input-shadow-hover: $shadow-base !default;
+$input-border: $border-base !default;
+$input-border-color: $border-color-base !default;
+$input-border-radius: $border-radius-base !default;
+$input-border-color-hover: $border-color-hover !default;
+$input-fill: $color-white !default;
+$input-fill-disabled: $disabled-fill-base !default;
+$input-color-disabled: $font-color-disabled-base !default;
+$input-icon-color: $color-grey !default;
+$input-placeholder-color: #99a9bf !default;
+$input-max-width: 314px !default;
+$input-hover-border: $border-color-hover !default;
+$input-focus-border: $color-primary !default;
+$input-focus-fill: $color-white !default;
+$input-disabled-fill: $disabled-fill-base !default;
+$input-disabled-border: $disabled-border-base !default;
+$input-disabled-color: $disabled-color-base !default;
+$input-disabled-placeholder-color: $color-grey !default;
+$input-large-font-size: 16px !default;
+$input-large-height: 42px !default;
+$input-small-font-size: 13px !default;
+$input-small-height: 30px !default;
+$input-mini-font-size: 12px !default;
+$input-mini-height: 22px !default;
+/* Cascader
+  -------------------------- */
+$cascader-menu-fill: $fill-base !default;
+$cascader-menu-font-size: $font-size-base !default;
+$cascader-menu-radius: $border-radius-base !default;
+$cascader-menu-border: $border-base !default;
+$cascader-menu-border-color: $border-color-base !default;
+$cascader-menu-border-width: $border-width-base !default;
+$cascader-menu-color: $font-color-base !default;
+$cascader-menu-option-color-active: $color-blue !default;
+$cascader-menu-option-fill-active: rgba($color-blue, 0.12) !default;
+$cascader-menu-option-color-hover: $font-color-base !default;
+$cascader-menu-option-fill-hover: rgba($color-black, 0.06) !default;
+$cascader-menu-option-color-disabled: #999 !default;
+$cascader-menu-option-fill-disabled: rgba($color-black, 0.06) !default;
+$cascader-menu-option-empty-color: #666 !default;
+$cascader-menu-group-color: #999 !default;
+$cascader-menu-shadow: 0 1px 2px rgba($color-black, 0.14), 0 0 3px rgba($color-black, 0.14) !default;
+$cascader-menu-option-pinyin-color: #999 !default;
+$cascader-menu-submenu-shadow: 1px 1px 2px rgba($color-black, 0.14), 1px 0 2px rgba($color-black, 0.14) !default;
+/* Group
+  -------------------------- */
+$group-option-flex: 0 0 (1/5) * 100% !default;
+$group-option-offset-bottom: 12px !default;
+$group-option-fill-hover: rgba($color-black, 0.06) !default;
+$group-title-color: $color-black !default;
+$group-title-font-size: $font-size-base !default;
+$group-title-width: 66px !default;
+/* Tab
+  -------------------------- */
+$tab-font-size: $font-size-base !default;
+$tab-border-line: 1px solid #e4e4e4 !default;
+$tab-header-color-active: $color-blue !default;
+$tab-header-color-hover: $font-color-base !default;
+$tab-header-color: $font-color-base !default;
+$tab-header-fill-active: rgba($color-black, 0.06) !default;
+$tab-header-fill-hover: rgba($color-black, 0.06) !default;
+$tab-vertical-header-width: 90px !default;
+$tab-vertical-header-count-color: $color-white !default;
+$tab-vertical-header-count-fill: $color-blue !default;
+$tab-horizontal-border: 2px solid #438de0 !default;
+/* Button
+  -------------------------- */
+$button-font-size: 14px !default;
+$button-border-radius: $border-radius-base !default;
+$button-paddding: 5px 20px !default;
+$button-padding-vertical: 10px !default;
+$button-padding-horizontal: 15px !default;
+$button-large-font-size: 16px !default;
+$button-large-padding-vertical: 11px !default;
+$button-large-padding-horizontal: 19px !default;
+$button-small-font-size: 12px !default;
+$button-small-padding-vertical: 7px !default;
+$button-small-padding-horizontal: 9px !default;
+$button-mini-font-size: 12px !default;
+$button-mini-padding-vertical: 4px !default;
+$button-mini-padding-horizontal: 4px !default;
+$button-default-color: #1F2D3D !default;
+$button-default-fill: $color-white !default;
+$button-default-border: #c4c4c4 !default;
+$button-ghost-color: #666 !default;
+$button-ghost-fill: transparent !default;
+$button-ghost-border: none !default;
+$button-disabled-color: $color-grey !default;
+$button-disabled-fill: #EFF2F7 !default;
+$button-disabled-border: $disabled-border-base !default;
+$button-primary-border: $color-primary !default;
+$button-primary-color: $color-white !default;
+$button-primary-fill: $color-primary !default;
+$button-success-border: $color-success !default;
+$button-success-color: $color-white !default;
+$button-success-fill: $color-success !default;
+$button-warning-border: $color-warning !default;
+$button-warning-color: $color-white !default;
+$button-warning-fill: $color-warning !default;
+$button-danger-border: $color-danger !default;
+$button-danger-color: $color-white !default;
+$button-danger-fill: $color-danger !default;
+$button-info-border: $color-info !default;
+$button-info-color: $color-white !default;
+$button-info-fill: $color-info !default;
+$button-hover-tint-percent: 20% !default;
+$button-active-shade-percent: 10% !default;
+/* cascader
+  -------------------------- */
+$cascader-height: 200px !default;
+/* Switch
+ -------------------------- */
+$switch-on-color: $color-primary !default;
+$switch-off-color: $color-grey !default;
+$switch-disabled-color: #E5E9F3 !default;
+$switch-disabled-text-color: #F9FAFC !default;
+$switch-font-size: $font-size-base !default;
+$switch-core-border-radius: 12px !default;
+$switch-width: 46px !default;
+$switch-height: 22px !default;
+$switch-button-size: 16px !default;
+/* Dialog
+ -------------------------- */
+$dialog-background-color: $color-blue !default;
+$dialog-footer-background: $color-blue-lighter !default;
+$dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !default;
+$dialog-tiny-width: 30% !default;
+$dialog-small-width: 50% !default;
+$dialog-large-width: 90% !default;
+$dialog-close-color: $color-grey !default;
+$dialog-close-hover-color: $color-primary !default;
+$dialog-title-font-size: 16px !default;
+$dialog-font-size: 14px !default;
+/* Table
+ -------------------------- */
+$table-border-color: #e0e6ed !default;
+$table-text-color: #1f2d3d !default;
+$table-header-background: #EFF2F7 !default;
+/* Pagination
+ -------------------------- */
+$pagination-font-size: 13px !default;
+$pagination-fill: $color-white !default;
+$pagination-color: $link-color !default;
+$pagination-border-radius: 2px !default;
+$pagination-button-color: #99a9bf !default;
+$pagination-button-size: 28px !default;
+$pagination-button-disabled-color: #e4e4e4 !default;
+$pagination-button-disabled-fill: $color-white !default;
+$pagination-border-color: $disabled-border-base !default;
+$pagination-hover-fill: $color-primary !default;
+$pagination-hover-color: $color-white !default;
+/* Popover
+ -------------------------- */
+$popover-fill: $color-white !default;
+$popover-font-size: 12px !default;
+$popover-border-color: $disabled-border-base !default;
+$popover-arrow-size: 6px !default;
+$popover-padding: 10px !default;
+$popover-title-font-size: 13px !default;
+$popover-title-color: #1f2d3d !default;
+/* Tooltip
+  -------------------------- */
+$tooltip-fill: #1f2d3d !default;
+$tooltip-color: $color-white !default;
+$tooltip-font-size: 12px !default;
+$tooltip-border-color: #1f2d3d !default;
+$tooltip-arrow-size: 6px !default;
+$tooltip-padding: 10px !default;
+/* Tag
+  -------------------------- */
+$tag-padding: 0 5px !default;
+$tag-fill: $border-color-hover !default;
+$tag-color: $color-white !default;
+$tag-close-color: #666 !default;
+$tag-font-size: 12px !default;
+$tag-border-radius: 4px !default;
+$tag-gray-fill: #e5e9f2 !default;
+$tag-gray-border: #e5e9f2 !default;
+$tag-gray-color: $link-color !default;
+$tag-primary-fill: rgba(32,159,255,0.10) !default;
+$tag-primary-border: rgba(32,159,255,0.20) !default;
+$tag-primary-color: $color-primary !default;
+$tag-success-fill: rgba(18,206,102,0.10) !default;
+$tag-success-border: rgba(18,206,102,0.20) !default;
+$tag-success-color: $color-success !default;
+$tag-warning-fill: rgba(247,186,41,0.10) !default;
+$tag-warning-border: rgba(247,186,41,0.20) !default;
+$tag-warning-color: $color-warning !default;
+$tag-danger-fill: rgba(255,73,73,0.10) !default;
+$tag-danger-border: rgba(255,73,73,0.20) !default;
+$tag-danger-color: $color-danger !default;
+/* Dropdown
+  -------------------------- */
+$dropdown-menu-box-shadow: $box-shadow-dark !default;
+$dropdown-menuItem-hover-fill: #e5e9f2 !default;
+$dropdown-menuItem-hover-color: $link-color !default;
+/* Badge
+  -------------------------- */
+$badge-fill: $color-danger !default;
+$badge-radius: 10px !default;
+$badge-font-size: 12px !default;
+$badge-padding: 6px !default;
+$badge-size: 18px !default;
+/* Card
+  --------------------------*/
+$card-border-color: $disabled-border-base !default;
+$card-border-radius: 4px !default;
+$card-padding: 20px !default;
+/* Slider
+  --------------------------*/
+$slider-main-background-color: $color-primary !default;
+$slider-runway-background-color: #e5e9f2 !default;
+$slider-button-hover-color: #1d8ce0 !default;
+$slider-stop-background-color: $color-grey !default;
+$slider-disable-color: $color-grey !default;
+$slider-margin: 16px 0 !default;
+$slider-border-radius: 3px !default;
+$slider-height: 4px !default;
+$slider-button-size: 12px !default;
+$slider-button-wrapper-size: 36px !default;
+$slider-button-wrapper-offset: -16px !default;
+/* Steps
+  --------------------------*/
+$steps-border-color: $disabled-border-base !default;
+$steps-border-radius: 4px !default;
+$steps-padding: 20px !default;
+/* Steps
+  --------------------------*/
+$menu-item-color: $link-color !default;
+$menu-item-fill: #eff2f7 !default;
+$menu-item-hover-fill: $disabled-border-base !default;
+$submenu-item-fill: #e5e9f2 !default;
+$dark-menu-item-color: $link-color !default;
+$dark-menu-item-fill: #324057 !default;
+$dark-menu-item-hover-fill: $link-color !default;
+$dark-submenu-item-fill: #1f2d3d !default;
+/* Rate
+  --------------------------*/
+$rate-height: 20px !default;
+$rate-font-size: $font-size-base !default;
+$rate-icon-size: 18px !default;
+$rate-icon-margin: 6px !default;
+$rate-icon-color: #C6D1DE !default;
+/* DatePicker
+  --------------------------*/
+$datepicker-color: $link-color !default;
+$datepicker-off-color: #ddd !default;
+$datepicker-header-color: $border-color-hover !default;
+$datepicker-icon-color: #99a9bf !default;
+$datepicker-border-color: $disabled-border-base !default;
+$datepicker-inner-border-color: #e4e4e4 !default;
+$datepicker-cell-hover-color: #e5e9f2 !default;
+$datepicker-inrange-color: #D3ECFF !default;
+$datepicker-inrange-hover-color: #AFDCFF !default;
+$datepicker-active-color: $color-primary !default;
+$datepicker-text-hover-color: $color-primary !default;
+/* Loading
+  --------------------------*/
+$loading-spinner-size: 42px !default;
+$loading-fullscreen-spinner-size: 50px !default;
+/* Scrollbar
+  --------------------------*/
+$scrollbar-background-color: rgba(#99a9bf, .3) !default;
+$scrollbar-hover-background-color: rgba(#99a9bf, .5) !default;
+/* Carousel
+  --------------------------*/
+$carousel-arrow-font-size: 12px !default;
+$carousel-arrow-size: 36px !default;
+$carousel-arrow-background: rgba(31, 45, 61, 0.11) !default;
+$carousel-arrow-hover-background: rgba(31, 45, 61, 0.23) !default;
+$carousel-indicator-width: 30px !default;
+$carousel-indicator-height: 2px !default;
+$carousel-indicator-padding-horizontal: 4px !default;
+$carousel-indicator-padding-vertical: 12px !default;
+$carousel-indicator-out-color: $border-color-hover !default;
+/* Collapse
+  --------------------------*/
+$collapse-border-color: #e0e6ed !default;
+$collapse-header-height: 43px !default;
+$collapse-border-radius: 0 !default;
+$collapse-header-padding: 20px !default;
+$collapse-header-fill: #fff !default;
+$collapse-header-color: #475669 !default;
+$collapse-header-size: 13px !default;
+$collapse-content-fill: #f9fafc !default;
+$collapse-content-size: 13px !default;
+$collapse-content-color: #1f2d3d !default

@@ -1,0 +1,246 @@
+@charset "UTF-8";
+@import "./input-number";
+@import "./tooltip";
+@import "./common/var";
+
+.el-slider{}
+
+.el-slider:before, .el-slider:after{
+
+    display: table;
+
+    content: "";
+}
+
+.el-slider:after{
+
+    clear: both;
+}
+
+.el-slider__runway{
+
+    width: 100%;
+
+    height: $slider-height;
+
+    margin: $slider-margin;
+
+    background-color: $slider-runway-background-color;
+
+    border-radius: $slider-border-radius;
+
+    position: relative;
+
+    cursor: pointer;
+
+    vertical-align: middle;
+
+    &.show-input {
+
+        margin-right: 160px;
+
+        width: auto;
+    }
+
+    &.disabled {
+
+        cursor: default;
+
+        .el-slider__bar, .el-slider__button {
+
+            background-color: $slider-disable-color;
+        }
+
+        .el-slider__button-wrapper {
+
+            &:hover,
+          &.hover {
+
+                cursor: not-allowed;
+            }
+
+            &.dragging {
+
+                cursor: not-allowed;
+            }
+        }
+
+        .el-slider__button {
+
+            &:hover,
+          &.hover,
+          &.dragging {
+
+                -ms-transform: scale(1);
+
+                    transform: scale(1);
+            }
+
+            &:hover,
+          &.hover {
+
+                cursor: not-allowed;
+            }
+
+            &.dragging {
+
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+.el-slider__input{
+
+    float: right;
+
+    margin-top: 3px;
+}
+
+.el-slider__bar{
+
+    height: $slider-height;
+
+    background-color: $slider-main-background-color;
+
+    border-top-left-radius: $slider-border-radius;
+
+    border-bottom-left-radius: $slider-border-radius;
+
+    position: absolute;
+}
+
+.el-slider__button-wrapper{
+
+    width: $slider-button-wrapper-size;
+
+    height: $slider-button-wrapper-size;
+
+    position: absolute;
+
+    z-index: 1001;
+
+    top: $slider-button-wrapper-offset;
+
+    -ms-transform: translateX(-50%);
+
+        transform: translateX(-50%);
+
+    background-color: transparent;
+
+    text-align: center;
+
+    -webkit-user-select: none;
+
+       -moz-user-select: none;
+
+        -ms-user-select: none;
+
+            user-select: none;
+
+    .el-tooltip {
+
+        line-height: 1;
+
+        height: 100%;
+
+        display: block;
+    }
+
+    .el-tooltip::after {
+
+        content: '';
+
+        width: 0;
+
+        height: 100%;
+
+        display: inline-block;
+
+        vertical-align: middle;
+    }
+
+    .el-tooltip__rel {
+
+        vertical-align: middle;
+    }
+
+    &:hover,
+      &.hover {
+
+        cursor: -webkit-grab;
+
+        cursor: grab;
+    }
+
+    &.dragging {
+
+        cursor: -webkit-grabbing;
+
+        cursor: grabbing;
+    }
+}
+
+.el-slider__button{
+
+    width: $slider-button-size;
+
+    height: $slider-button-size;
+
+    background-color: $slider-main-background-color;
+
+    border-radius: 50%;
+
+    transition: .2s;
+
+    -webkit-user-select: none;
+
+       -moz-user-select: none;
+
+        -ms-user-select: none;
+
+            user-select: none;
+
+    &:hover,
+      &.hover,
+      &.dragging {
+
+        -ms-transform: scale(1.5);
+
+            transform: scale(1.5);
+
+        background-color: $slider-button-hover-color;
+    }
+
+    &:hover,
+      &.hover {
+
+        cursor: -webkit-grab;
+
+        cursor: grab;
+    }
+
+    &.dragging {
+
+        cursor: -webkit-grabbing;
+
+        cursor: grabbing;
+    }
+}
+
+.el-slider__stop{
+
+    position: absolute;
+
+    width: $slider-height;
+
+    height: $slider-height;
+
+    border-radius: $border-radius-circle;
+
+    background-color: $slider-stop-background-color;
+
+    -ms-transform: translateX(-50%);
+
+        transform: translateX(-50%);
+}

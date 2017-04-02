@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@import "./input";
+@import "./common/var";
+/*@import "./core/dropdown.css";*/
+
+.element-cascader{
+
+    display: inline-block;
+
+    position: relative;
+}
+
+.element-cascader__dropdown{
+
+    background-color: $cascader-menu-fill;
+
+    border: $cascader-menu-border;
+
+    border-radius: $cascader-menu-radius;
+
+    box-shadow: $cascader-menu-submenu-shadow;
+
+    margin-top: 5px;
+
+    max-height: $cascader-height;
+
+    position: absolute;
+
+    white-space: nowrap;
+
+    z-index: 10;
+}
+
+.element-cascader__wrap{
+
+    overflow: hidden;
+}
+
+.element-cascader__menu{
+
+    border: 0;
+
+    box-shadow: none;
+
+    display: inline-block;
+
+    margin: 0;
+
+    position: relative;
+
+    vertical-align: top;
+
+    &::before {
+
+        border-left: $cascader-menu-border;
+
+        content: " ";
+
+        height: $cascader-height;
+
+        left: 0;
+
+        position: absolute;
+    }
+}
