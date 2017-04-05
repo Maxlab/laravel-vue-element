@@ -10,7 +10,7 @@ $ composer require maxlab/laravel-vue-element
 
 Then add to config/app.php
 ```php
-Maxlab\VueElement\Provider\VueElementServiceProvider::class
+Maxlab\VueElement\VueElementServiceProvider::class
 ```
 
 Then
